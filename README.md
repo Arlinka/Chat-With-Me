@@ -1,5 +1,3 @@
-![Logo](mookups/logo.png)
-
 # Chat With Me
 
 ![](https://img.shields.io/badge/progress-developing-green)
@@ -42,7 +40,7 @@
 -   Project type: SPA (Single Page Application)
 -   Supported Browsers: Latest version of Chrome
 
-## Mookups
+## Mockups
 
 ![Home Page](mookups/desktop/main.png)
 ![SignUp Page](mookups/desktop/signUp.png)
