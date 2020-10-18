@@ -1,4 +1,4 @@
-![Logo](mookups\logo.png)
+![Logo](mookups/logo.png)
 
 # Chat With Me
 
@@ -27,7 +27,7 @@
 
 ## Use cases
 
-✅ 1. User can SignIn / SignOut by using email and password
+1. User can SignIn / SignOut by using email and password
 
 2. Registered User can add, edit and delete own message (fill with Autor, Date, Text). User can write private messages to another user.
 
@@ -44,5 +44,5 @@
 
 ## Mookups
 
-![Home Page](mookups\desktop\main.png)
-![SignUp Page](mookups\desktop\signup.png)
+![Home Page](mookups/desktop/main.png)
+![SignUp Page](mookups/desktop/signUp.png)
