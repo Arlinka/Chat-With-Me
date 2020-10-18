@@ -10,6 +10,7 @@
 **Chat With Me** is a system that allows users to communicate in real time. All users can add, edit and delete own messages. All screens and functions of the chat should work without reloading the page.
 
 ## Chat Pages
+
 - Home / Message List
 - Authorization form
 - Registration form
@@ -18,10 +19,9 @@
 ## Glossary:
 
 ### Application Users (Users):
- - **Guest** - Unregistered user. All users are guests by default.
- - **Registered User**
 
-
+- **Guest** - Unregistered user. All users are guests by default.
+- **Registered User**
 
 ## Use cases
 
@@ -31,16 +31,18 @@
 
 3. Ability to view all messages for Unregistered Users.
 
-4. Messages can be filtered by: 
+4. Messages can be filtered by:
+
 - Author's name
 - Date
 - Text
 
 ## Non-functional requirements
--   Project type: SPA (Single Page Application)
--   Supported Browsers: Latest version of Chrome
+
+- Project type: SPA (Single Page Application)
+- Supported Browsers: Latest version of Chrome
 
 ## Mockups
 
-![Home Page](mookups/desktop/main.png)
-![SignUp Page](mookups/desktop/signUp.png)
+![Home Page](mockups/desktop/main.png)
+![SignUp Page](mockups/desktop/signUp.png)
