@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Chat With Me</title>
+    <link rel="stylesheet" href="style.css" media="all" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
+  </head>
+
+  <body>
+    <!-- -------- Header -->
+    <header>
+
+      <!-- navigation in mobile-->
+		<div class="navigation">
+        <label for="show-menu" class="show-menu">MENU</label>
+        <input type="checkbox" id="show-menu">
+        <ul class="rpv-menu">
+          <li class="menu-item"><a href="">Message Filter</a></li>
+          <li class="menu-item"><a href="">Users Online</a></li>
+          <li class="menu-item"><a href="">Sign Out</a></li>
+        </ul>		
+      </div>
+    </div>
+
+      <a class="logo" href="#">
+        <h1>Chat With Me</h1>
+        <h2 class="mobile">Let's have a little talk</h2>
+      </a>
+      <p class="mobile">Hi, Arlinka!<button type="button">Sign Out</button></p>
+    </header>
+
+    <!-- -------- Sidebar -->
+    <aside>
+      <h3>Messages Filter</h3>
+      <div class="filter">
+        <input type="checkbox" class="sidebar-check" value="user" id="1" />
+        <label for="1">User</label>
+        <input type="text" name="user" />
+        <button type="submit" class="fa fa-arrow-right"></button>
+      </div>
+
+      <div class="filter">
+        <input type="checkbox" class="sidebar-check" value="date" id="2" />
+        <label for="2">Date</label>
+        <input type="date" name="date" value="2020-10-22" />
+        <button type="submit" class="fa fa-arrow-right"></button>
+      </div>
+
+      <div class="filter">
+        <input type="checkbox" class="sidebar-check" value="text" id="3" />
+        <label for="3">Text</label>
+        <input type="text" name="text" />
+        <button type="submit" class="fa fa-arrow-right"></button>
+      </div>
+
+      <h3>Users Online</h3>
+      <ul>
+        <li>Arlinka</li>
+        <li>kvg-mur</li>
+        <li>Allhazeread</li>
+        <li>ORDANAX</li>
+        <li>mvaleryi</li>
+        <li>Chris Blade</li>
+        <li>alexbabashov</li>
+        <li>Irvalgilana</li>
+        <li>eKlikkkkkkkkkeKlikkkk</li>
+        <li>Ірина Денисюк</li>
+        <li>Svengali</li>
+        <li>WhiteApfel</li>
+        <li>MATPAC</li>
+        <li>shelpiAll</li>
+        <li>hazereadForest</li>
+        <li>RGSurge</li>
+        <li>Blavatsimonov-89DJ</li>
+        <li>NIKOLAY-D</li>
+        <li>shaltay-boltay</li>
+        <li>APOKALIPTIUS</li>
+        <li>mvaleryideni_didroiganna</li>
+        <li>TIMOHA69Evil</li>
+        <li>Grimoire</li>
+        <li>grunjaassasin</li>
+        <li>filandrew_houplutik</li>
+        <li>inkadykchanskiyAntonio</li>
+        <li>grunjaassasin</li>
+        <li>filandrew_houplutik</li>
+        <li>inkadykchanskiyAntonio</li>
+        <li>inkadykchanskiyAntonio</li>
+        <li>grunjaassasin</li>
+        <li>filandrew_houplutik</li>
+        <li>inkadykchanskiyAntonio</li>
+        <li>grunjaassasin</li>
+      </ul>
+    </aside>
+
+    <!-- -------- Chat Body -->
+    <main>
+      <button type="button" class="load-more">Load More</button>
+      <div class="chat-body">
+        <div class="message-item message-own">
+            <div class="user-name">Arlinka</div>
+              <div class="message-edit-buttons">
+                <i class="fa fa-pencil"></i>
+                <i class="fa fa-trash"></i>
+              </div>
+          
+              <p>Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit, sed do. 
+                Eiusmod tempor incididunt ut labore et 
+                dolore magna aliqua. Quis ipsum suspendisse 
+                ultrices gravida. Risus commodo viverra maecenas 
+                and and. accumsan lacus vel facilisis. 
+              </p>
+            <div class="message-date">10.10.20, 12:33</div>
+        </div>
+
+        <div class="message-item message-foreign">
+          <div class="user-name">kvg-mur</div>        
+            <p>Lorem ipsum
+            </p>
+          <div class="message-date">10.10.20, 12:33</div>
+        </div>
+
+        <div class="message-item message-foreign">
+          <div class="user-name">ORDANAX</div>        
+            <p>Lorem ipsum dolor sit amet, 
+               consectetur adipiscing elit, sed do.
+            </p>
+          <div class="message-date">10.10.20, 12:33</div>
+        </div>
+
+        <div class="message-item message-own message-privat">
+          <div class="user-name">Arlinka</div>
+          <div class="message-acceptor">ORDANAX</div>
+            <div class="message-edit-buttons">
+              <i class="fa fa-pencil"></i>
+              <i class="fa fa-trash"></i>
+            </div>
+        
+            <p>Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit, sed do. 
+            </p>
+          <div class="message-date">10.10.20, 12:33</div>
+        </div>
+
+          <div class="message-item message-foreign message-privat">
+            <div class="user-name">ORDANAX</div>       
+            <div class="message-acceptor">Arlinka</div> 
+              <p>Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit, sed do eiusmod
+              </p>
+            <div class="message-date">10.10.20, 12:33</div>
+          </div>
+          
+          <div class="message-item message-foreign">
+            <div class="user-name">kvg-mur</div>        
+              <p>Lorem ipsum dolor sit amet, 
+                 consectetur adipiscing elit, sed do.
+              </p>
+            <div class="message-date">10.10.20, 12:33</div>
+          </div>
+      </div>
+
+      <form action="">
+        <textarea placeholder="Enter your message ..."></textarea>
+        <button type="submit" class="fa fa-paper-plane"></button>
+      </form>
+    </main>
+
+    <!-- -------- Footer -->
+    <footer>
+      <p>
+        © 10.2020 Chat with me / THEME BY
+        <a href="https://github.com/Arlinka" target="_blank">Arlinka</a>
+      </p>
+      <p>
+        Contact:
+        <a href="mailto:arlinka@tut.by" target="_blank"> arlinka@tut.by</a>
+      </p>
+    </footer>
+  </body>
+  <!--
+    Иконки:
+    Отправить <i class="fa fa-paper-plane"></i>
+    Чекбокс <i class="fa fa-square"></i> переходит в <i class="fa fa-check-square"></i>
+    Пароли не совпадают <i class="fa fa-ban"></i>
+    Пароли совпадают <i class="fa fa-check"></i> или <i class="fa fa-times"></i>
+    Ввод логина <i class="fa fa-user"></i>
+    Пароль <i class="fa fa-lock"></i>
+    Посторить пароль <i class="fa fa-unlock"></i>
+    Редактировать сообщение <i class="fa fa-pen"></i>
+    Удалить <i class="fa fa-trash"></i>
+    
+    Menu:before{ content:"\f0c9";} - bar
+
+
+  -->
+</html>
