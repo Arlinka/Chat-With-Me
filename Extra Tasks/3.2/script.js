@@ -1,29 +1,24 @@
-const maxCash = (arr, start = 0, end = arr.length) => {
-  if (end <= start) return 0;
-
-  if (end > 3 * Math.pow(10, 4))
-    return `Array length exceeds ${3 * Math.pow(10, 4)}`;
-
-  for (let i = start; i < end; i++)
-    if (arr[i] < 0 || arr[i] > Math.pow(10, 4))
-      return `Array item negative or exceeds ${Math.pow(10, 4)}`;
-
-  let cash = 0,
-    curr_cash = 0;
-
-  for (let i = start; i < end; i++) {
-    for (let j = i + 1; j <= end; j++) {
-      if (arr[j] > arr[i]) {
-        curr_cash =
-          arr[j] -
-          arr[i] +
-          maxCash(arr, start, i - 1) +
-          maxCash(arr, j + 1, end);
-        if (curr_cash > cash) cash = curr_cash;
-      }
+const maxCash = (arr) => {
+  if (1 <= arr.length && arr.length <= 3 * Math.pow(10, 4)) {
+    for (let i = 0; i < arr.length; i++)
+      if (0 >= arr[i] || arr[i] >= Math.pow(10, 4))
+        return `Array item negative or exceeds ${Math.pow(10, 4)}`;
+    let i = (result = buy = sell = 0);
+    while (i < arr.length - 1) {
+      while (i < arr.length - 1 && arr[i] >= arr[i + 1]) i++;
+      if (i == arr.length - 1) break;
+      buy = i++;
+      while (i < arr.length && arr[i] >= arr[i - 1]) i++;
+      sell = i - 1;
+      result = result + arr[sell] - arr[buy];
     }
+    return `Maximum profit: ${result}`;
   }
-  return cash;
+  return `Array length exceeds ${3 * Math.pow(10, 4)}`;
 };
 
-console.log("Максимальная прибыль = " + maxCash([7, 1, 5, 3, 6, 4]));
+console.log(maxCash([7, 1, 5, 3, 6, 4]));
+console.log(maxCash([1, 2, 3, 4, 5]));
+console.log(maxCash([7, 6, 4, 3, 1]));
+console.log(maxCash([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]));
+console.log(maxCash([4]));
