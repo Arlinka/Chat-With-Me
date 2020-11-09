@@ -303,4 +303,3 @@ console.group("Remove Message method:");
 console.log(messagesModule.removeMessage("7"));
 console.log(messagesModule.removeMessage("50"));
 console.groupEnd();
-console.log(messagesModule.messages);
