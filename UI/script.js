@@ -173,15 +173,13 @@ const messagesModule = (function () {
 
       if (filterConfig.dateFrom) {
         filteredMessages = filteredMessages.filter(
-          (message) =>
-            new Date(message.createdAt) > new Date(filterConfig.dateFrom)
+          (message) => message.createdAt > filterConfig.dateFrom
         );
       }
 
       if (filterConfig.dateTo) {
         filteredMessages = filteredMessages.filter(
-          (message) =>
-            new Date(message.createdAt) < new Date(filterConfig.dateTo)
+          (message) => message.createdAt < filterConfig.dateTo
         );
       }
 
@@ -223,8 +221,12 @@ const messagesModule = (function () {
   const editMessage = (id, msg) => {
     let message = getMessage(id);
     if (message && validateMessage(msg)) {
-      message.text = msg.text || message.text;
-      msg.to ? (message.isPersonal = true) : (message.isPersonal = false);
+      message.text = msg.text;
+      if (msg.to) {
+        message.isPersonal = true;
+      } else {
+        message.isPersonal = false;
+      }
       message.to = msg.to ?? message.to;
       return true;
     }
@@ -234,9 +236,8 @@ const messagesModule = (function () {
   const removeMessage = (id) => {
     let message = getMessage(id);
     if (message) {
-      const index = messages.indexOf(
-        messages.find((message) => message.id === id)
-      );
+      const index = messages.findIndex((message) => message.id === id);
+      console.log(index);
       messages.splice(index, 1);
       return true;
     }
