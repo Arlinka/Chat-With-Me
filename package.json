@@ -1,0 +1,33 @@
+{
+  "name": "datamola-js-camping",
+  "version": "1.0.0",
+  "description": "![](https://img.shields.io/badge/progress-developing-green)\r ![](https://img.shields.io/badge/version-1.0-lightgrey)",
+  "main": "script.js",
+  "scripts": {
+    "lint": "eslint ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arlinka/DATAMOLA-JS-CAMPING.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arlinka/DATAMOLA-JS-CAMPING/issues"
+  },
+  "homepage": "https://github.com/Arlinka/DATAMOLA-JS-CAMPING#readme",
+  "devDependencies": {
+    "eslint-config-rallycoding": "^3.2.0",
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-jest-enzyme": "^6.0.2",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.18.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.9.1"
+  }
+}
