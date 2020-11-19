@@ -1,9 +1,7 @@
+i = 1;
+newId = () => `${i++}`;
+
 class Message {
-  _currentUser = "Arlinka";
-
-  _i = 1;
-  _newId = () => `${this._i++}`;
-
   constructor(
     text = "",
     id = null,
@@ -12,13 +10,14 @@ class Message {
     isPersonal = null,
     to = null
   ) {
-    this._id = id || this._newId();
+    this._id = id || newId();
     this.text = text || "";
     this._author = author || this._currentUser;
     this._createAt = createAt || new Date();
     this.isPersonal = isPersonal ?? !!to;
     this._to = to;
   }
+  _currentUser = "Arlinka";
 
   get id() {
     return this._id;
@@ -68,18 +67,6 @@ class Message {
   get text() {
     return this._text;
   }
-
-  writeMessage() {
-    console.log(
-      `${this.id}.${this.author}: ${this.text}, ${this.isPersonal} to ${this.to} `
-    );
-  }
-
-  editMessage(editObj = {}) {
-    const { text, to } = editObj;
-    this.to = to;
-    this.text = text;
-  }
 }
 
 class MessageList {
@@ -91,6 +78,19 @@ class MessageList {
       MessageList.validateMessage(msg) ? this._messages.push(msg) : false
     );
     this._author = currentUser;
+  }
+
+  get messages() {
+    return this._messages;
+  }
+
+  set messages(messages) {
+    if (messages.length === 0) this._messages = [];
+    else
+      messages.forEach((msg) => {
+        if (MessageList.validate(msg)) this._messages.push(msg);
+        else false;
+      });
   }
 
   getPage(skip = 0, top = 10, filterConfig) {
@@ -141,11 +141,11 @@ class MessageList {
     return sortedMessages;
   }
 
-  validateMessage(msg) {
+  static validate(msg) {
     return msg.text && msg.text.length <= 200 && typeof msg.text == "string";
   }
 
-  addMessage(
+  add(
     text = "",
     id = null,
     author = null,
@@ -159,7 +159,7 @@ class MessageList {
     }
   }
 
-  editMessage(idnew, text, to) {
+  edit(idnew, text, to) {
     const message = this._messages.find(({ id }) => idnew === id);
     if (message) {
       const obj = { text: text, to: to };
@@ -167,6 +167,23 @@ class MessageList {
       return true;
     }
     return false;
+  }
+
+  get(id) {
+    return messages.find((message) => message.id === id) ?? false;
+  }
+
+  addAll(msg) {
+    const messagesEmpty = [];
+    msg.forEach((msg) => {
+      if (MessageList.validate(msg)) this.messages.push(msg);
+      else messagesEmpty.push(msg);
+    });
+    return messagesEmpty;
+  }
+
+  clear() {
+    this.messages = [];
   }
 }
 
