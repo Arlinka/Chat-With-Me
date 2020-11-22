@@ -1,10 +1,6 @@
 "use strict";
 
 const messagesModule = (function () {
-  let i = 1;
-  const newId = () => `${i++}`;
-
-  let currentAuthor = "Arlinka";
 
   const messages = [
     {

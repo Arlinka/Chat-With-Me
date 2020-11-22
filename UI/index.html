@@ -34,7 +34,7 @@
         <h1>Chat With Me</h1>
         <h2 class="mobile">Let's have a little talk</h2>
       </a>
-      <p class="mobile">Hi, Arlinka!<button type="button">Sign Out</button></p>
+      <p class="mobile" id="current-user"><!-- Hi, Arlinka!--><button type="button">Sign Out</button></p>
     </header>
 
     <!-- -------- Sidebar -->
@@ -62,111 +62,13 @@
       </div>
 
       <h3>Users Online</h3>
-      <ul>
-        <li>Arlinka</li>
-        <li>kvg-mur</li>
-        <li>Allhazeread</li>
-        <li>ORDANAX</li>
-        <li>mvaleryi</li>
-        <li>Chris Blade</li>
-        <li>alexbabashov</li>
-        <li>Irvalgilana</li>
-        <li>eKlikkkkkkkkkeKlikkkk</li>
-        <li>Ірина Денисюк</li>
-        <li>Svengali</li>
-        <li>WhiteApfel</li>
-        <li>MATPAC</li>
-        <li>shelpiAll</li>
-        <li>hazereadForest</li>
-        <li>RGSurge</li>
-        <li>Blavatsimonov-89DJ</li>
-        <li>NIKOLAY-D</li>
-        <li>shaltay-boltay</li>
-        <li>APOKALIPTIUS</li>
-        <li>mvaleryideni_didroiganna</li>
-        <li>TIMOHA69Evil</li>
-        <li>Grimoire</li>
-        <li>grunjaassasin</li>
-        <li>filandrew_houplutik</li>
-        <li>inkadykchanskiyAntonio</li>
-        <li>grunjaassasin</li>
-        <li>filandrew_houplutik</li>
-        <li>inkadykchanskiyAntonio</li>
-        <li>inkadykchanskiyAntonio</li>
-        <li>grunjaassasin</li>
-        <li>filandrew_houplutik</li>
-        <li>inkadykchanskiyAntonio</li>
-        <li>grunjaassasin</li>
-      </ul>
+      <ul id="users-online"></ul>
     </aside>
 
     <!-- -------- Chat Body -->
     <main>
       <button type="button" class="load-more">Load More</button>
-      <div class="chat-body">
-        <div class="message-item message-own">
-            <div class="user-name">Arlinka</div>
-              <div class="message-edit-buttons">
-                <i class="fa fa-pencil"></i>
-                <i class="fa fa-trash"></i>
-              </div>
-          
-              <p>Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do. 
-                Eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Quis ipsum suspendisse 
-                ultrices gravida. Risus commodo viverra maecenas 
-                and and. accumsan lacus vel facilisis. 
-              </p>
-            <div class="message-date">10.10.20, 12:33</div>
-        </div>
-
-        <div class="message-item message-foreign">
-          <div class="user-name">kvg-mur</div>        
-            <p>Lorem ipsum
-            </p>
-          <div class="message-date">10.10.20, 12:33</div>
-        </div>
-
-        <div class="message-item message-foreign">
-          <div class="user-name">ORDANAX</div>        
-            <p>Lorem ipsum dolor sit amet, 
-               consectetur adipiscing elit, sed do.
-            </p>
-          <div class="message-date">10.10.20, 12:33</div>
-        </div>
-
-        <div class="message-item message-own message-privat">
-          <div class="user-name">Arlinka</div>
-          <div class="message-acceptor">ORDANAX</div>
-            <div class="message-edit-buttons">
-              <i class="fa fa-pencil"></i>
-              <i class="fa fa-trash"></i>
-            </div>
-        
-            <p>Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, sed do. 
-            </p>
-          <div class="message-date">10.10.20, 12:33</div>
-        </div>
-
-          <div class="message-item message-foreign message-privat">
-            <div class="user-name">ORDANAX</div>       
-            <div class="message-acceptor">Arlinka</div> 
-              <p>Lorem ipsum dolor sit amet, consectetur 
-                adipiscing elit, sed do eiusmod
-              </p>
-            <div class="message-date">10.10.20, 12:33</div>
-          </div>
-          
-          <div class="message-item message-foreign">
-            <div class="user-name">kvg-mur</div>        
-              <p>Lorem ipsum dolor sit amet, 
-                 consectetur adipiscing elit, sed do.
-              </p>
-            <div class="message-date">10.10.20, 12:33</div>
-          </div>
-      </div>
+      <div class="chat-body" id="messages-item"></div>
 
       <form action="">
         <textarea placeholder="Enter your message ..."></textarea>
@@ -186,5 +88,17 @@
       </p>
     </footer>
   </body>
-  <script src="script.js"></script>
+  <script src="js/constants.js"></script>
+  
+  <script src="js/Message.js"></script>
+  <script src="js/MessageList.js"></script>
+  <script src="js/UserList.js"></script>
+  <script src="js/HeaderView.js"></script>
+  <script src="js/ActiveUsersView.js"></script>
+  <script src="js/MessagesView.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="js/message-test.js"></script>
+   <script src="js/script-dom.js"></script>
+   <script src="js/dom-test.js"></script>
 </html>
