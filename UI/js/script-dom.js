@@ -18,7 +18,7 @@ const showMessages = (skip = 0, top = 10, filterConfig) => {
 };
 
 const addMessage = (msg) => {
-    MessageList.add(msg);
+  //  MessageList.add(msg);
     showMessages(0, 10);
 };
 
