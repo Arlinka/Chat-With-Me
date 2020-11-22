@@ -5,8 +5,8 @@ showMessages(0, 20);
 
 removeMessage("10");
 
-addMessage(new Message("New message!"));
+//addMessage(new Message("New message!"));
 
-console.log(messagesList);
+//console.log(messagesList);
 
-editMessage("15", { text: "New text!" });
+//editMessage("15", { text: "New text!" });
