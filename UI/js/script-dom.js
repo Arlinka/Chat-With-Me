@@ -18,10 +18,8 @@ const showMessages = (skip = 0, top = 10, filterConfig) => {
 };
 
 const addMessage = (msg) => {
-  if (MessageList.add(msg)) {
     MessageList.add(msg);
     showMessages(0, 10);
-  }
 };
 
 const removeMessage = (id) => {
