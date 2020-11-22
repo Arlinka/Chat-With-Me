@@ -17,11 +17,6 @@ const showMessages = (skip = 0, top = 10, filterConfig) => {
   messagesView.display(messageList.getPage(skip, top, filterConfig));
 };
 
-const addMessage = (msg) => {
-  //  MessageList.add(msg);
-    showMessages(0, 10);
-};
-
 const removeMessage = (id) => {
   const index = messagesList.findIndex((message) => message._id === id);
   if (index != -1) {
