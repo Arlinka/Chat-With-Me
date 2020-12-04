@@ -58,11 +58,17 @@ const createChildLi = (node, li) => {
     }
     item.children ? createChildLi(item, childLi) : null;
   }
-    if (li.children)
-    li.onclick = function () {
-      ul.classList.toggle("roll");
-    };
-
 };
 
 createList("Extra Task 6.1", list);
+
+document.getElementsByTagName("ul")[0].onclick = function (event) {
+  for (li of document.querySelectorAll("li")) {
+    const item = document.createElement("p");
+    li.before(item);
+    item.appendChild(item.nextSibling);
+  }
+  event.target.parentNode.querySelector(
+    "ul"
+  ).hidden = !event.target.parentNode.querySelector("ul").hidden;
+};
