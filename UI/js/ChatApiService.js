@@ -87,6 +87,7 @@ async function app(da = false) {
 
     const messagesAllArrJSON = await fetch(url, requestOptions);
     let messagesAllArr = await messagesAllArrJSON.json();
+
     return messagesAllArr;
   }
 
@@ -97,7 +98,7 @@ async function app(da = false) {
 
   const script2 = document.createElement("script");
   script2.type = "text/javascript";
-  script2.src = "https://arlinka.github.io/DATAMOLA-JS-CAMPING/UI/js/showPassword.js";
+  script2.src = ".https://arlinka.github.io/DATAMOLA-JS-CAMPING/UI/js/showPassword.js";
   await document.getElementsByTagName("head")[0].appendChild(script2);
 
   const script5 = document.createElement("script");
@@ -126,8 +127,9 @@ async function app(da = false) {
     messagesView.display(messageList.getPage(skip, top, filterConfig));
   };
 
+
   setTimeout(() => {
-    showMessages(0, messagesAllArr.length);
+    showMessages(0, messagesAllArr.length+1);
     if (da) {
       chatBody = document.getElementsByClassName("chat-body")[0];
       chatBody.scrollTop = chatBody.scrollHeight;
@@ -156,7 +158,7 @@ async function loginPost(userLogin, userPassword) {
   await fetch("https://jslabdb.datamola.com/auth/login", requestOptions)
     .then((response) => response.text())
     .then((result) => {
-      clearInterval(mainPageInterval);
+
       console.log(result);
       const resultParsed = JSON.parse(result);
       if (resultParsed.token) {
