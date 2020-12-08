@@ -181,6 +181,7 @@ function chooseUserTo(event) {
 function clearUser() {
   document.getElementsByClassName("to")[0].style.display = "none";
   document.getElementsByClassName("fa-times")[0].style.visibility = "hidden";
+  location.reload();
 }
 
 //Редактирование сообщения
