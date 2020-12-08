@@ -102,7 +102,7 @@ async function app(da = false) {
 
   const script5 = document.createElement("script");
   script5.type = "text/javascript";
-  script5.src = "https://arlinka.github.io/DATAMOLA-JS-CAMPING/UI/js/ChatController.js";
+  script5.src = "https://arlinka.github.io/DATAMOLA-JS-CAMPING/UI/js/showPassword.js";
   await document.getElementsByTagName("head")[0].appendChild(script5);
 
   const messagesView = new MessagesView("messages-item");
