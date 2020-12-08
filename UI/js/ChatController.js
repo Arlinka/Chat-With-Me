@@ -156,7 +156,7 @@ loadMore.addEventListener("click", (event) => {
     setTimeout(() => {
       topM += 10;
       console.log(topM);
-      app(); 
+   //   app(); 
     }, 1000);
   });
 });
