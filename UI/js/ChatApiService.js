@@ -174,7 +174,8 @@ async function loginPost(userLogin, userPassword) {
       }
     })
     .catch((error) => console.log("error", error));
-  app(true);
+  location.reload();
+ // app(true);
 }
 
 async function logout() {
@@ -224,7 +225,8 @@ async function register(userLogin, userPassword) {
       }
     })
     .catch((error) => console.log("error", error));
-  app(true);
+ // app(true);
+  location.reload();
 }
 
 async function addMesages(text, to) {
