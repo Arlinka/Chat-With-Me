@@ -98,7 +98,7 @@ async function app(da = false) {
 
   const script2 = document.createElement("script");
   script2.type = "text/javascript";
-  script2.src = ".https://arlinka.github.io/DATAMOLA-JS-CAMPING/UI/js/showPassword.js";
+  script2.src = "https://arlinka.github.io/DATAMOLA-JS-CAMPING/UI/js/showPassword.js";
   await document.getElementsByTagName("head")[0].appendChild(script2);
 
   const script5 = document.createElement("script");
