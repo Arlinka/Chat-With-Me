@@ -285,7 +285,7 @@ function filterMesseges(val) {
       "filterText",
       document.getElementById("filter-3").value
     );
-    app();
+   // app();
       document.getElementById("filter-3").value = "";
       document.getElementById("filter-2").value = "";
       document.getElementById("filter-1").value = "";
