@@ -58,7 +58,7 @@ function mainPageGuest() {
   setTimeout(() => {
     setCurrentUser("");
     app(); 
-  }, 504);
+  }, 1004);
   document.getElementsByTagName("textarea")[0].disabled = true;
   document.getElementsByClassName("fa-paper-plane")[0].disabled = true;
   document.getElementsByTagName("textarea")[0].placeholder =
@@ -205,7 +205,7 @@ function editMessageUI() {
       itemEdit = "";
       location.reload();
     });
-  }, 502);
+  }, 1002);
 }
 
 // Ввод сообщения и редактирование
@@ -229,7 +229,7 @@ if (!isEdit)
       }
       setTimeout(() => {
         event.target.style.color = colorBtn;
-      }, 250);
+      }, 1000);
     }
     textarea.value = "";
   });
@@ -255,7 +255,7 @@ setTimeout(() => {
     event.preventDefault();
     windowDelete.style.display = "none";
   });
-}, 502);
+}, 1002);
 
 function errorPage() {
   clearPage();
