@@ -58,7 +58,7 @@ function mainPageGuest() {
   clearPage();
   setTimeout(() => {
     setCurrentUser("");
-    app(); 
+  //  app(); 
   }, 1004);
   document.getElementsByTagName("textarea")[0].disabled = true;
   document.getElementsByClassName("fa-paper-plane")[0].disabled = true;
