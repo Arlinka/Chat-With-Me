@@ -96,10 +96,10 @@ async function app(da = false) {
   // currUser = JSON.parse(localStorage.getItem("currentUser"));
   // currentUser = currUser;
 
-  const script2 = document.createElement("script");
-  script2.type = "text/javascript";
-  script2.src = "js/showPassword.js";
-  await document.getElementsByTagName("head")[0].appendChild(script2);
+//   const script2 = document.createElement("script");
+//   script2.type = "text/javascript";
+//   script2.src = "js/showPassword.js";
+//   await document.getElementsByTagName("head")[0].appendChild(script2);
 
   const script5 = document.createElement("script");
   script5.type = "text/javascript";
