@@ -95,19 +95,14 @@ async function app(da = false) {
   // currUser = JSON.parse(localStorage.getItem("currentUser"));
   // currentUser = currUser;
 
-  const script1 = document.createElement("script");
-  script1.type = "text/javascript";
-  script1.src = "../js/constants.js";
-  await document.getElementsByTagName("head")[0].appendChild(script1);
-
   const script2 = document.createElement("script");
   script2.type = "text/javascript";
-  script2.src = "../js/showPassword.js";
+  script2.src = "js/showPassword.js";
   await document.getElementsByTagName("head")[0].appendChild(script2);
 
   const script5 = document.createElement("script");
   script5.type = "text/javascript";
-  script5.src = "../js/ChatController.js";
+  script5.src = "js/ChatController.js";
   await document.getElementsByTagName("head")[0].appendChild(script5);
 
   const messagesView = new MessagesView("messages-item");
