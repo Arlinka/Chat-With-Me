@@ -88,7 +88,7 @@ function mainPage() {
   mainBody.style.display = "block";
 }
 
-async function loginPage() {
+ function loginPage() {
   clearInterval(mainPageInterval);
   localStorage.removeItem("currentUser");
   clearPage();
