@@ -166,6 +166,7 @@ async function loginPost(userLogin, userPassword) {
         currUser = userLogin;
         setCurrentUser(currUser);
         localStorage.setItem("currentUser", JSON.stringify(currUser));
+        location.reload();
         mainPage();
       } else {
         document.getElementById("login").classList.add("not-equal-pass");
@@ -174,7 +175,6 @@ async function loginPost(userLogin, userPassword) {
       }
     })
     .catch((error) => console.log("error", error));
-  location.reload();
  // app(true);
 }
 
