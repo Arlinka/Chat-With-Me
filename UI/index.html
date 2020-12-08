@@ -15,8 +15,7 @@
   </head>
 
   <body>
-    <!-- -------- Header -->
-    <header>
+       <header>
 
       <!-- navigation in mobile-->
 		<div class="navigation">
@@ -29,53 +28,135 @@
         </ul>		
       </div>
     </div>
-
-      <a class="logo" href="#">
+    
+    <!-- -------- Header -->
+      <a class="logo" id="logo">
         <h1>Chat With Me</h1>
         <h2 class="mobile">Let's have a little talk</h2>
       </a>
-      <p class="mobile" id="current-user"><!-- Hi, Arlinka!--><button type="button">Sign Out</button></p>
+      <p class="mobile" id="current-user"></p>
     </header>
-
-    <!-- -------- Sidebar -->
-    <aside>
+    
+    
+    <!-- -------- Sidebar Main Page-->
+    <aside id="sidebar-main">
       <h3>Messages Filter</h3>
       <div class="filter">
-        <input type="checkbox" class="sidebar-check" value="user" id="1" />
+        <input type="checkbox" class="sidebar-check" id="1" />
         <label for="1">User</label>
-        <input type="text" name="user" />
-        <button type="submit" class="fa fa-arrow-right"></button>
+        <input type="text" name="user" id="filter-1" />
       </div>
 
       <div class="filter">
-        <input type="checkbox" class="sidebar-check" value="date" id="2" />
+        <input type="checkbox" class="sidebar-check" id="2" />
         <label for="2">Date</label>
-        <input type="date" name="date" value="2020-10-22" />
-        <button type="submit" class="fa fa-arrow-right"></button>
+        <input type="date" name="date" value="2020-10-22" id="filter-2" />
+        <button type="submit" class="fa fa-arrow-right" id="filter-btn"></button>
       </div>
 
       <div class="filter">
-        <input type="checkbox" class="sidebar-check" value="text" id="3" />
+        <input type="checkbox" class="sidebar-check" id="3" />
         <label for="3">Text</label>
-        <input type="text" name="text" />
-        <button type="submit" class="fa fa-arrow-right"></button>
+        <input type="text" name="text" id="filter-3"/>
       </div>
 
       <h3>Users Online</h3>
       <ul id="users-online"></ul>
     </aside>
 
-    <!-- -------- Chat Body -->
-    <main>
-      <button type="button" class="load-more">Load More</button>
-      <div class="chat-body" id="messages-item"></div>
+    <!-- -------- Sidebar Registration & Login Pages-->
+    <aside id="sidebar-log">
+        <div class="get-started"></div>
+        <p id="welcome-text">Please login with your personal 
+        info to keep connected with 
+        people all around the world.</p>
+        <div class="aside-footer">
+            <p>Any problem? Return to</p>
+            <a id="home">Homepage</a>
+        </div>
+    </aside>
 
-      <form action="">
+    <!-- -------- Chat Body Main Page-->
+    
+    <main id="chat-body-main">
+      <div id="delete-message-window">
+      <div id="tittleDel">Delete message?</div>
+      <p>This message will be removed from all this chat</p>
+      <button type="button" class="deleteBtn" id="delYes">Yes!</button>
+      <button type="button" class="deleteBtn" id="delNo">No</button>
+    </div>
+      <button type="button" class="load-more" id="load-more">Load More</button>
+      <div class="chat-body" id="messages-item"></div>
+      <div class="to"></div>
+      <div id="clear">Clear input</div>
+      <i class="fa fa-times"></i>
+      <form id="chat-form">
         <textarea placeholder="Enter your message ..."></textarea>
         <button type="submit" class="fa fa-paper-plane"></button>
       </form>
     </main>
 
+    <!-- -------- Chat Body Login Page-->
+    <main id="chat-body-log">
+    <form id="form-login" class="form-reg">
+            <div class="form-name">Log In</div>
+            <p>Log in with your name and password</p>
+            <div class="reg-input" id="login">
+              <label for="login"><i class="fa fa-user"></i></label>
+              <input type="text" placeholder="Login" name="login" id="log1" required>
+            </div>
+            <div class="reg-input" id="pass-inp-log">
+              <label for="password"><i class="fa fa-lock"></i></label>
+              <input type="password" id="pass-login" placeholder="Password" name="password" required>
+              <i class="fa fa-eye" onclick="return showPassword(this, 'pass-login');"></i>
+            </div>
+            <div id="res-log"></div>
+            <button type="submit" class="btn signin-btn" id="loginbtn">Sign In</button>
+            <p>Not a member? <a id="reg">Create account</a></p>
+    </form>
+    </main>
+
+    <!-- -------- Chat Body Registration Page-->
+    <main id="chat-body-reg">
+    <form class="form-reg" id="form-registr">
+            <div class="form-name">Tell Us About You</div>
+            <p>Some basic details before to get started.</p>
+            <div class="reg-input" id="registr">
+              <label for="login"><i class="fa fa-user"></i></label>
+              <input type="text" placeholder="Login" name="login" id="registr-login" required>
+            </div>
+            <div class="reg-input" id="pass-inp1">
+              <label for="password"><i class="fa fa-lock"></i></label>
+              <input type="password" id="password-input1" placeholder="Password" name="password" required>
+              <i class="fa fa-eye" onclick="return showPassword(this, 'password-input1');"></i>
+            </div>
+            <div class="reg-input" id="pass-inp2">
+              <label for="confirm-password"><i class="fa fa-unlock-alt"></i></label>
+              <input type="password" id="password-input2" placeholder="Confirm password" name="confirm-password" required>
+              <i class="fa fa-eye" onclick="return showPassword(this, 'password-input2');"></i>
+            </div>
+            <div id="res"></div>
+            <button type="submit" class="btn" id="registerbtn">Create Account</button>
+            <p>Have an account? <a class="log">Login</a></p>
+    </form>
+    </main>
+
+  <!-- -------- Error Page-->
+
+          
+     <aside id="error-aside">
+      <div class="error-img"></div>
+    </aside>
+
+    <main id="error-main">
+    <div class="error-window">
+      <div class="form-name">OOPS!</div>
+      <p>Something went wrong. Please try again later.</p>
+      <button type="submit" class="btn">GO HOME</button>
+    </div>
+    </main>
+
+ 
     <!-- -------- Footer -->
     <footer>
       <p>
@@ -87,18 +168,14 @@
         <a href="mailto:arlinka@tut.by" target="_blank"> arlinka@tut.by</a>
       </p>
     </footer>
-  </body>
-  <script src="js/constants.js"></script>
-  
+  </body>    
+  <script src="js/HeaderView.js"></script>
   <script src="js/Message.js"></script>
   <script src="js/MessageList.js"></script>
   <script src="js/UserList.js"></script>
-  <script src="js/HeaderView.js"></script>
   <script src="js/ActiveUsersView.js"></script>
   <script src="js/MessagesView.js"></script>
 
-  <script src="script.js"></script>
-  <script src="js/message-test.js"></script>
-   <script src="js/script-dom.js"></script>
-   <script src="js/dom-test.js"></script>
+  <script src="js/ChatApiService.js"></script>
+
 </html>

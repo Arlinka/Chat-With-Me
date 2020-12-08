@@ -1,16 +1,19 @@
+i = 1;
+const newId = () => `${i++}`;
+
 class Message {
   constructor(
     text = "",
     to = null,
     id = null,
     author = null,
-    createAt = null,
+    createdAt = null,
     isPersonal = null
   ) {
     this._id = id || newId();
     this.text = text || "";
     this._author = author || this._currentUser;
-    this._createAt = createAt || new Date();
+    this._createAt = createdAt || new Date();
     this.isPersonal = isPersonal ?? !!to;
     this._to = to;
   }
@@ -31,7 +34,7 @@ class Message {
     if (this._createdAt !== createdAt) throw new Error("Can't change field");
   }
 
-  get createAt() {
+  get createdAt() {
     return this._createAt;
   }
 
