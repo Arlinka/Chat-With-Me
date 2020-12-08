@@ -45,7 +45,6 @@ document.querySelector("a.log").addEventListener("click", (event) => {
 
 document.getElementById("home").addEventListener("click", (event) => {
   event.preventDefault();
-  clearInterval(mainPageInterval);
   mainPageGuest();
 });
 
@@ -58,6 +57,7 @@ function mainPageGuest() {
   clearPage();
   setTimeout(() => {
     setCurrentUser("");
+    app(); 
   }, 504);
   document.getElementsByTagName("textarea")[0].disabled = true;
   document.getElementsByClassName("fa-paper-plane")[0].disabled = true;
@@ -147,18 +147,15 @@ function registrPage() {
     });
 }
 
+
 //кнопка load-more
 loadMore.style.visibility = "visible";
 loadMore.addEventListener("click", (event) => {
  event.preventDefault();
-  clearInterval(mainPageInterval);
-  event.target.addEventListener("click", () => {
-   // setTimeout(() => {
+
       topM += 10;
       console.log(topM);
-   //   app(); 
- //   }, 1000);
-  });
+
 });
 
 //Для отправки личного сообщения
