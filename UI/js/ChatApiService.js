@@ -22,6 +22,21 @@ let asideMain = document.getElementById("sidebar-main"),
   regBody = document.getElementById("chat-body-reg"),
   loadMore = document.getElementById("load-more");
 
+function showPassword(target, id) {
+  let input = document.getElementById(id);
+  if (input.getAttribute("type") == "password") {
+    target.classList.remove("fa-eye");
+    target.classList.add("fa-eye-slash");
+    input.setAttribute("type", "text");
+  } else {
+    target.classList.remove("fa-eye-slash");
+    target.classList.add("fa-eye");
+    input.setAttribute("type", "password");
+  }
+  return false;
+}
+
+
 let showActiveUsers = (usersView, currentUserList) => {
   usersView.display(currentUserList);
 };
