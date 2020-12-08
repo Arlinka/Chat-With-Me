@@ -82,14 +82,14 @@ class MessageList {
   add(
     text = "",
     to = null,
-    id = null,
+    id = newId(),
     author = null,
-    createAt = null,
+    createdAt = null,
     isPersonal = null
   ) {
-    const a = new Message(text, to, id, author, createAt, isPersonal);
-    if (this.isValid(a)) {
-      this._messages.push(a);
+    const mess = new Message(text, to, id, author, createdAt, isPersonal);
+    if (this.isValid(mess)) {
+      this._messages.push(mess);
     }
   }
 
