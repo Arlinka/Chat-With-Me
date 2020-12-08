@@ -46,7 +46,7 @@ document.querySelector("a.log").addEventListener("click", (event) => {
 
 document.getElementById("home").addEventListener("click", (event) => {
   event.preventDefault();
-  mainPageGuest();
+  location.reload();
 });
 
 document.getElementById("users-online").addEventListener("click", chooseUserTo);
