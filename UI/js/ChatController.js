@@ -153,11 +153,11 @@ loadMore.addEventListener("click", (event) => {
  event.preventDefault();
   clearInterval(mainPageInterval);
   event.target.addEventListener("click", () => {
-    setTimeout(() => {
+   // setTimeout(() => {
       topM += 10;
       console.log(topM);
    //   app(); 
-    }, 1000);
+ //   }, 1000);
   });
 });
 
