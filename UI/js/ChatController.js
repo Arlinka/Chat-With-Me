@@ -27,6 +27,7 @@ document.getElementById("current-user").addEventListener("click", (event) => {
   if (currUser) {
     logout();
   } else {
+    clearInterval(mainPageInterval);
     loginPage();
   }
 });
