@@ -1,4 +1,4 @@
-let topM = 5;
+let topM = 10;
 
 setTimeout(() => {
   const chatBody = document.getElementsByClassName("chat-body")[0];
