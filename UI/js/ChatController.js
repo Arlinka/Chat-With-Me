@@ -155,7 +155,7 @@ loadMore.style.visibility = "visible";
 loadMore.addEventListener("click", (event) => {
  event.preventDefault();
 
-      topM += 10;
+      topM += 5;
       console.log(topM);
 
 });
