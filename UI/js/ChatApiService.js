@@ -119,7 +119,7 @@ async function app(da = false) {
   const script5 = document.createElement("script");
   script5.type = "text/javascript";
   script5.src = "js/ChatController.js";
-  await document.getElementsByTagName("body")[0].appendChild(script5);
+  // await document.getElementsByTagName("body")[0].appendChild(script5);
 
   const messagesView = new MessagesView("messages-item");
 

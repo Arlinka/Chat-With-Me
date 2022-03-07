@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Arlinka/DATAMOLA-JS-CAMPING.git"
+    "url": "git+https://github.com/Arlinka/Chat-With-Me.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Arlinka/DATAMOLA-JS-CAMPING/issues"
+    "url": "https://github.com/Arlinka/Chat-With-Me/issues"
   },
-  "homepage": "https://github.com/Arlinka/DATAMOLA-JS-CAMPING#readme",
+  "homepage": "https://github.com/Arlinka/Chat-With-Me#readme",
   "devDependencies": {
     "eslint-config-rallycoding": "^3.2.0",
     "babel-eslint": "^8.2.3",

@@ -1,4 +1,4 @@
-function showPassword(target, id) {
+export function showPassword(target, id) {
   let input = document.getElementById(id);
   if (input.getAttribute("type") == "password") {
     target.classList.remove("fa-eye");

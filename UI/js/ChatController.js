@@ -6,13 +6,13 @@ setTimeout(() => {
   else mainPage(currUser);
 }, 0);
 
-function clearPage() {
-  asideMain.style.display = "none";
-  mainBody.style.display = "none";
-  asideLog.style.display = "none";
-  logBody.style.display = "none";
-  regBody.style.display = "none";
-}
+// function clearPage() {
+//   asideMain.style.display = "none";
+//   mainBody.style.display = "none";
+//   asideLog.style.display = "none";
+//   logBody.style.display = "none";
+//   regBody.style.display = "none";
+// }
 
 document.getElementById("reg").addEventListener("click", (event) => {
   event.preventDefault();
