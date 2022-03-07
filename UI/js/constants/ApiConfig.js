@@ -2,13 +2,17 @@ export const headers = {
   "Content-Type": "application/json",
 };
 
+export const endpointParams = {
+  sighInParam: "signInWithPassword",
+  sighUpParam: "signUp",
+  usersParam: "lookup",
+};
+
 export const firebaseConfig = {
   apiKey: "AIzaSyA6hB8ARlxXtJ1bHoB8P-AaXHIH6wgtjrE",
   authDomain: "chat-js-c1117.firebaseapp.com",
   databaseURL: "https://chat-js-c1117-default-rtdb.firebaseio.com",
   endpoint: "https://identitytoolkit.googleapis.com/v1/accounts:",
-  sighInParam: "signInWithPassword",
-  sighUpParam: "signUp",
   projectId: "chat-js-c1117",
   storageBucket: "chat-js-c1117.appspot.com",
   messagingSenderId: "563953812",
@@ -24,10 +28,8 @@ export const firebaseErrors = {
   USER_DISABLED: "The user account has been disabled by an administrator.",
 };
 
-export function getEndpointSignIn({ isLogin = true }) {
-  return `${firebaseConfig.endpoint}${
-    isLogin ? firebaseConfig.sighInParam : firebaseConfig.sighUpParam
-  }?key=${firebaseConfig.apiKey}`;
+export function getEndpoint(param) {
+  return `${firebaseConfig.endpoint}${param}?key=${firebaseConfig.apiKey}`;
 }
 
 export function getErrorMessage(message) {

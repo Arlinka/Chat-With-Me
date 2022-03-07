@@ -39,28 +39,36 @@
 
   <!-- -------- Sidebar Main Page-->
   <aside id="sidebar-main">
-    <h3>Messages Filter</h3>
-    <div class="filter">
-      <input type="checkbox" class="sidebar-check" id="1" />
-      <label for="1">User</label>
-      <input type="text" name="user" id="filter-1" />
-    </div>
+    <div class="sidebar-item">
+      <div class="aside-name">Messages Filter: </div>
+      <form action="" class="filters">
+        <div class="filter-item">
+          <label for="1">User</label>
+          <input class="filter-input" type="text" name="user" id="filter-1" placeholder="Author Name" />
+        </div>
 
-    <div class="filter">
-      <input type="checkbox" class="sidebar-check" id="2" />
-      <label for="2">Date</label>
-      <input type="date" name="date" value="2020-10-22" id="filter-2" />
-      <button type="submit" class="fa fa-arrow-right" id="filter-btn"></button>
-    </div>
+        <div class="filter-item dates">
+          <label for="2">Date</label>
+          <input class="filter-input" type="date" name="date-from" id="filter-21" placeholder="Date From" />
+          <input class="filter-input" type="date" name="date-to" id="filter-22" placeholder="Date To" />
+        </div>
 
-    <div class="filter">
-      <input type="checkbox" class="sidebar-check" id="3" />
-      <label for="3">Text</label>
-      <input type="text" name="text" id="filter-3" />
-    </div>
+        <div class="filter-item">
+          <label for="3">Text</label>
+          <input class="filter-input" type="text" name="text" id="filter-3" placeholder="Message Text" />
+        </div>
 
-    <h3>Users Online</h3>
-    <ul id="users-online"></ul>
+        <div class="filter-actions">
+          <button class="filter-submit" type="submit" id="filter-btn">Filter</button>
+          <button class="filter-reset" type="reset">Reset</button>
+        </div>
+
+      </form>
+    </div>
+    <div class="sidebar-item">
+      <div class="aside-name">Users Online: </div>
+      <ul id="users-online"></ul>
+    </div>
   </aside>
 
   <!-- -------- Sidebar Registration & Login Pages-->
@@ -169,7 +177,8 @@
   </footer>
 </body>
 
-<script type="module" src="./js/AuthService.js"></script>
+<script type="module" src="./js/api/AuthApiService.js"></script>
+<script type="module" src="./js/api/UsersApiService.js"></script>
 <script src="js/HeaderView.js"></script>
 <script src="js/Message.js"></script>
 <script src="js/MessageList.js"></script>
